@@ -35,11 +35,14 @@ public class BRTEST {
 				
 			}
 			
-			List<WebElement> atags1=driver.
-					findElements(By.tagName("//a[@ onclick='waitWindow()' and @href='javascript:_gotoPLMShortCut('300','321','OWNER@@GAP~@PROFOMA_PO@@P000447');']\r\n"
-					));
-
-
+			WebElement atags1=driver.
+					findElement(By.xpath("//div[@class='dashInner recentViewDocInner']/a[1]"));
+			
+			WebElement po=atags1.findElement(By.className("ic ic_po"));
+			//for( int i=0;i >atags.size();i++) {
+				System.out.println("The links "+atags1.getText());
+				
+			//}
 	}
 
 }
